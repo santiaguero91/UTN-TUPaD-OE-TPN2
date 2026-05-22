@@ -1,0 +1,15 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Colab files
+sample_data/
+
+# Environment files
+.env
+
+# Generated results
+/resultados/
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
