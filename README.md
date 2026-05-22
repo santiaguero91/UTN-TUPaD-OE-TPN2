@@ -31,8 +31,7 @@ Este proyecto es un ejemplo de análisis de ventas diarias en un local comercial
 ## Estructura del proyecto
 - `datos/ventas_sample.csv` — fuente de datos de ventas
 - `scripts/analyze_sales.py` — script de análisis de ventas
-- `resultados/` — salida generada con el resumen de ventas
-- `Jira-issues.md` — ejemplo de tareas/Issues para Jira
+- `resultados/` — salida generada con el resumen de ventas ( se generara al ser ejecutado el script )
 - `.gitignore` — exclusiones recomendadas para el repositorio
 
 ## Descripción del dataset utilizado
