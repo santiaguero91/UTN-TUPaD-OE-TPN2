@@ -2,7 +2,7 @@ from pathlib import Path
 import csv
 from collections import defaultdict
 
-
+# Loads and validates sales data from a CSV file.
 def load_sales_data(csv_path):
     sales = []
     with csv_path.open(newline='', encoding='utf-8') as csvfile:
@@ -16,7 +16,7 @@ def load_sales_data(csv_path):
                 continue
     return sales
 
-
+# Calculates totals, averages, and monthly sales statistics.
 def summarize_sales(sales):
     total = sum(amount for _, amount in sales)
     count = len(sales)
@@ -39,7 +39,7 @@ def summarize_sales(sales):
         'sales_by_month': dict(sorted(sales_by_month.items())),
     }
 
-
+# Writes the generated sales summary into a text file.
 def write_summary(summary, output_path):
     output_path.parent.mkdir(parents=True, exist_ok=True)
     with output_path.open('w', encoding='utf-8') as f:
@@ -54,7 +54,7 @@ def write_summary(summary, output_path):
         for month, value in summary['sales_by_month'].items():
             f.write(f'  {month}: ${value:,.2f}\n')
 
-
+# Main execution block for loading, processing, and exporting sales data.
 if __name__ == '__main__':
     repo_root = Path(__file__).resolve().parent.parent
     input_path = repo_root / 'datos' / 'ventas_sample.csv'
