@@ -17,45 +17,58 @@ Santiago Nicolás Aguero Urquiza
 
 ---
 
-
 # Proyecto de Ventas en Local
 
-Este proyecto es un ejemplo de análisis de ventas diarias en un local comercial, armado según el trabajo práctico de Gestión Colaborativa, Control de Versiones y Organización Empresarial.
+Este proyecto es un ejemplo de análisis de ventas de un local comercial, armado según el trabajo práctico de Gestión Colaborativa, Control de Versiones y Organización Empresarial.
+
+## Escenario elegido
+
+Escenario B — Análisis de Ventas de una Pequeña Empresa.
 
 ## Objetivo
 - Usar los datos de `datos/ventas_sample.csv`
-- Implementar un script reproducible para analizar las ventas
-- Generar resultados en `resultados/ventas_resumen.txt`
+- Implementar un script reproducible para analizar las ventas por producto y por mes
+- Generar un resumen en texto y un gráfico de barras en `resultados/`
 - Mantener una estructura clara de carpetas para Git y para un flujo de trabajo en equipo
 
 ## Estructura del proyecto
 - `datos/ventas_sample.csv` — fuente de datos de ventas
 - `scripts/analyze_sales.py` — script de análisis de ventas
-- `resultados/` — salida generada con el resumen de ventas ( se generara al ser ejecutado el script )
-- `.gitignore` — exclusiones recomendadas para el repositorio
+- `resultados/ventas_resumen.txt` — resumen generado al ejecutar el script
+- `resultados/ventas_grafico.png` — gráfico de barras generado al ejecutar el script
+- `.gitignore` — exclusiones del repositorio
 
 ## Descripción del dataset utilizado
 
 - Archivo: `datos/ventas_sample.csv`
 - Formato: CSV (valores separados por comas)
-- Columnas:
-  | Columna / Tipo / Descripción
-  | `id`: int / id del registro
-  | `sales_date`: Date (YYYY-MM-DD) / Fecha correspondiente a la venta
-  | `sales_amount`: int / Monto total de ventas del día
+- Registros: 115
+- Período: enero–abril 2024
 
+| Columna | Tipo | Descripción |
+|---|---|---|
+| `id` | int | Identificador del registro |
+| `fecha_venta` | date (YYYY-MM-DD) | Fecha de la transacción |
+| `producto` | string | Nombre del producto vendido |
+| `cantidad` | int | Unidades vendidas |
+| `precio` | float | Precio unitario |
 
-  ## Instrucciones para ejecutar el script
-1. Clonar o descargar el repositorio.
-2.Para ejecutar el programa, es necesario ubicarse en la raíz del proyecto dentro del entorno de Google Colab y utilizar el siguiente comando:
-3. Copiar `ventas_sample.csv` a la carpeta `datos/` si no está allí.
-3. Ejecutar:
-   ```!python scripts/analyze_sales.py```
-4. Revisar el archivo `resultados/ventas_resumen.txt` para ver el resumen de ventas del local generado.
+## Instrucciones para ejecutar el script
+
+1. Clonar el repositorio en Google Colab:
+   ```
+   !git clone https://github.com/santiaguero91/UTN-TUPaD-OE-TPN2.git
+   %cd UTN-TUPaD-OE-TPN2
+   ```
+2. Ejecutar el script desde la raíz del proyecto:
+   ```
+   !python scripts/analyze_sales.py
+   ```
+3. Revisar los resultados generados en la carpeta `resultados/`.
 
 ## Resultados esperados
-- Total de ventas
-- Promedio diario de ventas
-- Día con mayor y menor venta
-- Totales por mes
-
+- Total de ventas del período
+- Promedio de venta por transacción
+- Producto más vendido por unidades
+- Totales de ventas agrupados por mes
+- Gráfico de barras con la evolución mensual de ventas (`resultados/ventas_grafico.png`)
