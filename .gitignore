@@ -1,15 +1,24 @@
 # Python cache
 __pycache__/
 *.pyc
+*.pyo
 
-# Colab files
+# Jupyter / Google Colab
+.ipynb_checkpoints/
 sample_data/
 
-# Environment files
+# Variables de entorno y credenciales (nunca deben subirse al repo)
 .env
+*.env
 
-# Generated results
-/resultados/
+# Archivos PDF (la consigna del TP no forma parte del entregable)
+*.pdf
 
-# Jupyter checkpoints
-.ipynb_checkpoints/
+# Archivos de datos pesados no necesarios para reproducir el análisis
+*.xlsx
+*.xls
+*.log
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
