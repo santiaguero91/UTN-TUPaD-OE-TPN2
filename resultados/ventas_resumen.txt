@@ -1,0 +1,22 @@
+Resumen de ventas del local
+==========================
+Total de ventas: $441,300.00
+Cantidad de registros: 115
+Venta promedio por registro: $3,837.39
+Producto más vendido: Medialuna (116 unidades)
+
+Ventas por mes:
+  2024-01: $101,400.00
+  2024-02: $113,500.00
+  2024-03: $126,900.00
+  2024-04: $99,500.00
+
+Ventas por producto (de mayor a menor ingreso):
+  Gaseosa 330ml: $73,600.00
+  Jugo natural: $70,500.00
+  Facturas x4: $62,400.00
+  Café con leche: $56,400.00
+  Alfajor: $52,200.00
+  Sándwich de miga: $48,600.00
+  Medialuna: $46,400.00
+  Agua mineral 500ml: $31,200.00
